@@ -2,6 +2,8 @@ Clams::Application.routes.draw do
   # Access API description at /api_taster
   mount ApiTaster::Engine => "/api_taster" if Rails.env.development?
 
+  resources :comments, :groups, :posts, :statuses, :subscriptions, :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
