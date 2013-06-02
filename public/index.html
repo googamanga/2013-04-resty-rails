@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hack Reactor - Resty Rails</title>
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="./js/lib/jQuery.js"></script>
+    <script src="./js/lib/underscore.js"></script>
+    <script src="./js/Backbone/backbone.js"></script>
+
+    <!--models -->
+    <script type="text/javascript" src="./js/BBmodels/User.js" ></script>
+    <script type="text/javascript" src="./js/BBmodels/Users.js" ></script>
+    <!--views -->
+    <script type="text/javascript" src="./js/BBviews/UserView.js" ></script>
+    <script type="text/javascript" src="./js/BBviews/UsersView.js" ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row-fluid">
+        <div class='span6'>Critical Mass</div>
+        <div id='loggedInUser' class='span6 text-right'></div>
+      </div>
+      <div class="row-fluid">
+        <div class="span3">...</div>
+        <div class="span6">...</div>
+        <div class="span3">...</div>
+      </div>
+    </div>
+    <script>
+    $(document).ready(function(){
+        window.userView = new UserView({model: new User()});
+        window.usersView = new UsersView({model: new User()});
+        // var wallView = new WallView({model: new Wall()});
+        // var subsView = new SubsView({model: new Subs()});
+        // var groupsView = new GropusView({model: new Groups()});
+      });
+    </script>
+  </body>
+</html>
